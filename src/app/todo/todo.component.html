@@ -1,0 +1,21 @@
+<div>
+  <form #todoList="ngForm" (ngSubmit)="addList(todoList)">
+
+    <input type="text" name="todo" [(ngModel)]="todo" required #todoInput="ngModel">
+
+
+    <button type="submit" [disabled]="!todoList.form.valid">Add</button>
+    <div *ngIf="!todoInput.valid && todoInput.touched" class="error">
+      Enter item to Add
+    </div>
+
+  </form>
+
+  <p>{{remainingTodoItems}} remaining out of {{totalTasks}} tasks</p>
+  <ul>
+    <li *ngFor="let todo of items, let i = index">
+      <span (click)="toggleItem(todo)" [ngClass]="{'is-done': todo.isDone} ">{{todo.name}}</span>
+    </li>
+  </ul>
+
+</div>

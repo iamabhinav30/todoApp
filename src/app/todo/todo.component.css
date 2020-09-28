@@ -1,0 +1,10 @@
+.is-done {
+  text-decoration: line-through;
+  color: #008000;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff0000;
+}
