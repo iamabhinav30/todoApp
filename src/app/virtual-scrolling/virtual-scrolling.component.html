@@ -1,0 +1,16 @@
+Abhinav
+
+
+<div class="">
+  <cdk-virtual-scroll-viewport itemSize="300" class="viewport">
+
+
+    <div *cdkVirtualFor="let team of teams">
+      <div>{{team.name}}</div>
+      <img [src]="team.image" [alt]="team.name">
+      <div>League {{team.league}}</div>
+
+    </div>
+
+  </cdk-virtual-scroll-viewport>
+</div>

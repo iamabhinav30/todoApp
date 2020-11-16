@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MediatorService } from '../services/mediator.service';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
   selector: 'app-todo',
@@ -8,9 +10,28 @@ import { NgForm } from '@angular/forms';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private utility: UtilityService,
+    private mediator: MediatorService) { }
+
+
+  public user;
+  data;
+
 
   ngOnInit() {
+
+
+    // this.utility.loaderResponse.subscribe(res => {
+    //   this.data = res;
+    // });
+
+    // debugger;
+    this.mediator.Event('user').subscribe(res => {
+      this.user = res;
+      console.log('res', res);
+    })
+
+    console.log()
   }
 
   public todo: any;

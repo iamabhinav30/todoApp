@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoComponent } from './todo/todo.component';
+import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,16 @@ const routes: Routes = [
     path: 'todo',
     component: TodoComponent
   },
+  {
+    path: 'vscroll',
+    component: VirtualScrollingComponent
+  },
+  {
+    path: 'comm',
+    loadChildren: () => import('./angular-communication/angular-communication.module')
+      .then(m => m.AngularCommunicationModule)
+  },
+
   {
     path: '**',
     component: PageNotFoundComponent

@@ -1,3 +1,5 @@
+<h1>{{user}}</h1>
+
 <div>
   <form #todoList="ngForm" (ngSubmit)="addList(todoList)">
 
@@ -14,7 +16,7 @@
   <p>{{remainingTodoItems}} remaining out of {{totalTasks}} tasks</p>
   <ul>
     <li *ngFor="let todo of items, let i = index">
-      <span (click)="toggleItem(todo)" [ngClass]="{'is-done': todo.isDone} ">{{todo.name}}</span>
+      <span (click)="toggleItem(todo)" [ngClass]="{'is-done': todo.isDone} ">{{i+1}} {{todo.name}}</span>
     </li>
   </ul>
 
