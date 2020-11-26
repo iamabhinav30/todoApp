@@ -13,6 +13,9 @@ import { CommonModule } from '@angular/common';
 import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling.component';
 import { AngularCommunicationComponent } from './angular-communication/angular-communication.component';
 import { MediatorService } from './services/mediator.service';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -30,7 +33,9 @@ import { MediatorService } from './services/mediator.service';
     FormsModule,
     ScrollingModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [
     MediatorService

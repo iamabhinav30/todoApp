@@ -28,6 +28,11 @@ const routes: Routes = [
     loadChildren: () => import('./angular-communication/angular-communication.module')
       .then(m => m.AngularCommunicationModule)
   },
+  {
+    path: 'parent',
+    loadChildren: () => import('./parent/parent.module')
+      .then(m => m.ParentModule)
+  },
 
   {
     path: '**',

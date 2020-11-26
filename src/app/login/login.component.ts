@@ -43,5 +43,9 @@ export class LoginComponent implements OnInit {
       // }
     }
   }
+
+  navigateToParent() {
+    this.router.navigate(['parent']);
+  }
 }
 

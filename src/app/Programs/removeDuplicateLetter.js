@@ -11,3 +11,4 @@ function unique_char(str1) {
   return uniql;
 }
 console.log(unique_char("thequickbrownfoxjumpsoverthelazydog"));
+// thequickbrownfxjmpsvlazydg

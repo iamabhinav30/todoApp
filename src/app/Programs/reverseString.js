@@ -6,10 +6,12 @@ function reverseWord(str) {
   }
   console.log(newStr);
 }
-reverseWord('Abhinav');
+reverseWord('Abhinav is an Indian');
+// Output: naidnI na si vanihbA
+
+// -----------------------------------------------------------------------------
 
 function reverseString(str) {
-  debugger;
   var newStr = str.split(' ');
   var finalStr = ''
   for (var i = 0; i < newStr.length; i++) {
@@ -22,4 +24,5 @@ function reverseString(str) {
   }
   console.log(finalStr);
 }
-reverseString('Abhinav is great')
+reverseString('Abhinav is an Indian and lives in Bangalore')
+//Output :  vanihbA si na naidnI dna sevil ni erolagnaB
