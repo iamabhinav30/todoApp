@@ -47,5 +47,11 @@ export class LoginComponent implements OnInit {
   navigateToParent() {
     this.router.navigate(['parent']);
   }
+
+  navigateToView() {
+    this.router.navigate(['view']);
+  }
+
+  title = "this is title"
 }
 

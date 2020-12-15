@@ -1,19 +1,37 @@
-<h1>Login Page</h1>
-<form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
-  <div class="form-group">
-    <label>Username</label>
-    <input type="text" class="form-control" formControlName="username" name="username">
+<div class="row">
+  <div class="col-md-2">
+    <h3>Login Page</h3>
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" formControlName="username" name="username">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password" name="password">
+      </div>
+
+      <div *ngIf=""></div>
+      <button type="submit" [disabled]="loginForm.invalid" class="btn btn-light">Sign In
+        <!-- <div class="spinner-border"></div> -->
+      </button>
+    </form>
+
+
+    <button (click)="navigateToParent()">Parent</button>
+
   </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" formControlName="password" name="password">
+  <!-- <button (click)="navigateToView()">VIew</button> -->
+
+  <div class="col-md-5">
+    <app-message-list>
+      <!-- This is the projected content for app message app-message-list -->
+      <app-message [message]="title"></app-message>
+      <app-message #tempMessage [message]="title"></app-message>
+      <app-message [message]="title"></app-message>
+
+
+    </app-message-list>
   </div>
 
-  <div *ngIf=""></div>
-  <button type="submit" [disabled]="loginForm.invalid" class="btn btn-light">Sign In
-    <div class="spinner-border"></div>
-  </button>
-</form>
-
-
-<button (click)="navigateToParent()">Parent</button>
+</div>

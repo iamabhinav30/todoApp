@@ -16,6 +16,8 @@ import { MediatorService } from './services/mediator.service';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { MessageComponent } from './view/message/message.component';
+import { MessageListComponent } from './view/message-list/message-list.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { environment } from '../environments/environment';
     TodoComponent,
     PageNotFoundComponent,
     VirtualScrollingComponent,
-    AngularCommunicationComponent
+    AngularCommunicationComponent,
+    MessageComponent,
+    MessageListComponent
   ],
   imports: [
     BrowserModule,
