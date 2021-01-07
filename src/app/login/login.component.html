@@ -13,7 +13,7 @@
 
       <div *ngIf=""></div>
       <button type="submit" [disabled]="loginForm.invalid" class="btn btn-light">Sign In
-        <!-- <div class="spinner-border"></div> -->
+
       </button>
     </form>
 
@@ -37,3 +37,16 @@
   </div>
 
 </div>
+
+
+<!-- <form [formGroup]="formGroup" id="formId" [attr.style]="'width: 25rem;'">
+  <p #paragraphElement>{ title }</p>
+  <ceres-text-field id="defaultField1" formControlName="textField" label="Name" placeholder="Enter name">
+  </ceres-text-field>
+  <ceres-text-area label="Description" id="textArea" formControlName="textArea" placeholder="Enter description"
+    [autosize]="true" resizable minRows="3" maxRows="6">
+  </ceres-text-area>
+  <ceres-text-field id="defaultField2" formControlName="textField" label="Name 2" placeholder="Enter name">
+  </ceres-text-field>
+  <ceres-button link click="submit($event)" class="ceres-button--primary" label="Submit"></ceres-button>
+</form> -->

@@ -1,3 +1,4 @@
+
 import { MessageListComponent } from './view/message-list/message-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -28,6 +29,7 @@ const routes: Routes = [
     path: 'view',
     component: MessageListComponent
   },
+
   {
     path: 'comm',
     loadChildren: () => import('./angular-communication/angular-communication.module')

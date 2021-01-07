@@ -20,6 +20,7 @@ import { MessageComponent } from './view/message/message.component';
 import { MessageListComponent } from './view/message-list/message-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,8 @@ import { MessageListComponent } from './view/message-list/message-list.component
 
   ],
   bootstrap: [AppComponent]
+
+
 })
 export class AppModule { }
 
